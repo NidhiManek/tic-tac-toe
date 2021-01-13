@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tic-tac-toe</string>
+    <string name="heading2">Welcome to tic-tac-toe!</string>
+    <string name="status">x\'s turn</string>
+    <string name="grid" />
+
+</resources>

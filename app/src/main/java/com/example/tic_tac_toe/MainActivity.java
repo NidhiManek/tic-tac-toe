@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 img.animate().translationYBy(1000f).setDuration(300);
             }
         }
+        ((ImageView)findViewById(R.id.imageView1)).setImageResource(0);
         for(int[] winPosition: winPositions){
             if(gameState[winPosition[0]] == gameState[winPosition[1]] &&
                     gameState[winPosition[1]] == gameState[winPosition[2]] &&
@@ -51,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 TextView status = findViewById(R.id.status);
                 status.setText(winnerStr);
 
+            }
+            else if(gameState[1]!=2 && gameState[2]!=2 && gameState[3]!=2  && gameState[4]!=2 && gameState[5]!=2 && gameState[6]!=2 && gameState[7]!=2
+            && gameState[8]!=2 && gameState[0]!=2)
+            {
+                TextView status = findViewById(R.id.status);
+                status.setText("Tie - Tap to play again!");
+                gameActive=false;
             }
         }
 
